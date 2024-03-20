@@ -1,16 +1,20 @@
 # Image_satelite_classification_CNN
-Classification d'images satellites avec CNN 
 
-Ce projet vise à classifier des images satellites en utilisant un réseau de neurones convolutionnel (CNN). Les images satellites sont des données multispectrales, chaque pixel contenant des informations provenant de différentes bandes spectrales (rouge, vert, bleu et infrarouge). 
-L'objectif est de prédire la catégorie à laquelle appartient chaque image, parmi quatre classes : Terrain stérile, Arbres, Terrain herbeux et Autre. 
+This project aims to classify satellite images using a convolutional neural network (CNN). Satellite images are multispectral data, with each pixel containing information from different spectral bands (red, green, blue, and infrared). The goal is to predict the category to which each image belongs, among four classes: Barren Land, Trees, Grassland, and Other. 
 
-Étapes suivies : 
-Prétraitement des données : Les images satellites ont été prétraitées pour les mettre dans un format approprié pour l'entraînement du CNN. Cela comprend le chargement des données à partir de fichiers CSV, le redimensionnement des images en 28x28 pixels avec 4 canaux, et la normalisation des valeurs de pixel entre 0 et 1. 
-Construction du modèle CNN : Un modèle CNN simple a été construit en utilisant TensorFlow. Le modèle comprend plusieurs couches de convolution et de pooling, suivies de couches entièrement connectées. La fonction d'activation ReLU est utilisée pour les couches cachées, tandis que la couche de sortie utilise une fonction d'activation softmax pour la classification multiclasses. 
-Entraînement du modèle : Le modèle CNN a été entraîné sur un ensemble de données d'entraînement à l'aide de l'algorithme de descente de gradient stochastique avec la fonction de perte de cross-entropy catégorique. L'optimiseur Adam a été utilisé pour minimiser la perte. 
-Évaluation du modèle : Le modèle entraîné a été évalué sur un ensemble de données de test pour évaluer sa performance. Les mesures d'évaluation comprennent la précision (accuracy) et la perte (loss) obtenues sur l'ensemble de test. 
+Project Steps: 
 
-Résultats : Après l'entraînement du modèle CNN, 
-les performances suivantes ont été obtenues sur l'ensemble de test : Précision : 97% Perte : 0.08 
+Data Preprocessing: Satellite images were preprocessed to prepare them for CNN training. This included loading the data from CSV files, resizing images to 28x28 pixels with 4 channels, and normalizing pixel values between 0 and 1. 
 
-Le modèle a montré une précision élevée dans la classification des images satellites, démontrant ainsi son efficacité dans ce domaine.
+CNN Model Construction: A simple CNN model was built using TensorFlow. The model consists of multiple convolutional and pooling layers, followed by fully connected layers. ReLU activation function is used for hidden layers, while the output layer uses softmax activation for multi-class classification. 
+
+Model Training: The CNN model was trained on a training dataset using stochastic gradient descent with categorical cross-entropy loss function. The Adam optimizer was used to minimize the loss. Model Evaluation: The trained model was evaluated on a test dataset to assess its performance. 
+
+Evaluation metrics include accuracy and loss obtained on the test set.
+
+Results:
+After training the CNN model, the following performance was achieved on the test dataset:
+
+Accuracy: 97%
+Loss: 0.08
+The model demonstrated high precision in satellite image classification, showcasing its effectiveness in this domain
